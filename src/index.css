@@ -6,11 +6,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #0d0a0b;
 }
-label {
-  text-align: center;
-  background-color: #fff;
+
+body {
+  color: #ffffff;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e71d36;
+  height: 100vh;
+  padding-top: 50px;
 }
 
 form {
@@ -22,14 +30,18 @@ form {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+label {
+  text-align: center;
+  color: #333333;
 }
 
 input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
 }
 
 .btnSubmit {
@@ -37,8 +49,13 @@ input {
   border: none;
   border-radius: 5px;
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnSubmit:hover {
+  background-color: #0056b3;
 }
 
 ul {
@@ -55,26 +72,68 @@ li {
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  align-items: center;
+  background-color: #2ec4b6;
+  text-overflow: ellipsis;
+  text-overflow: hidden;
+  color: #011627;
 }
 
-.btnDelete {
-  background-color: #dc3545;
+.btnDelete,
+.btnEdit {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  color: #fff;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btnDelete {
+  background-color: transparent;
+  color: red;
+}
+
+.btnDelete:hover {
+  transform: scale(1.1);
 }
 
 .iconDelete {
   font-size: 25px;
-  background-color: #dc3545;
-  border-radius: 50%;
 }
 
-.container {
-  margin-top: 50px;
+.btnEdit {
+  background-color: transparent;
+  color: #fff;
+}
+
+.btnEdit:hover {
+  transform: scale(1.1);
+}
+
+.iconEdit {
+  font-size: 20px;
+}
+
+.iconSave {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.btnFlex {
+  display: flex;
+  gap: 10px;
+}
+
+.postTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btnSave {
+  background-color: #ff9f1c;
+}
+
+.btnSave:hover {
+  background-color: #af6600;
 }
